@@ -24,10 +24,11 @@ class ProblemaC18:
         return np.sum(diffs**2)
 
     def g(self, z):
-        return (1 / self.D) * np.sum(-z * np.sin(np.sqrt(np.abs(z))))
+        return (1 / self.D) * np.sum(-z * np.cos(np.sqrt(np.abs(z))))
 
     def h(self, z):
-        return (1 / self.D) * np.sum(z * np.sin(np.sqrt(np.abs(z))))
+        return (1 / self.D) * np.sum(z * np.cos(np.sqrt(np.abs(z))))
+
 
     def sumar_violation(self, z):
         h_val = self.h(z)
